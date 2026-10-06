@@ -1,3 +1,4 @@
+// LAB 5: DEMONSTRATION OF QUEUES
 #include<stdio.h>
 #include<stdlib.h>
 #define SIZE 5
