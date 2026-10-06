@@ -1,4 +1,4 @@
-// LAB 3: C PROGRAM TO EVALUATE A GIVEN POSTFIX EXPRESSION
+// LAB 3: EVALUATING A GIVEN POSTFIX EXPRESSION
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
