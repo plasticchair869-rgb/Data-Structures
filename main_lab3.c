@@ -10,7 +10,7 @@ struct stack // structure definition
     float data[SIZE];
 };
 typedef struct stack STACK;
-void push(STACK *s,float item)// push function
+void push(STACK *s,float item) // push function
 {
     s->data[++(s->top)]=item;
 }
@@ -34,7 +34,7 @@ float compute(float op1,char symbol,float op2) // computational part
         return pow(op1,op2);
     }
 }
-float evalPostfix(STACK *s,char postfix[15]) // main c function for the program
+float evalPostfix(STACK *s,char postfix[15]) // evaluation function 
 {
     char symbol;
     int i;
@@ -54,7 +54,7 @@ float evalPostfix(STACK *s,char postfix[15]) // main c function for the program
     }
     return pop(s);
 }
-int main()
+int main() // main function
 {
     char postfix[15];
     float res;
