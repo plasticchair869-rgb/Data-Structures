@@ -2,16 +2,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct node
+struct node // structure defintion
 {
     int data;
     struct node *left;
     struct node *right;
 };
 
-typedef struct node *NODE;
+typedef struct node *NODE; // macro
 
-NODE createBST(NODE root, int item)
+NODE createBST(NODE root, int item) // creating the binary tree
 {
     NODE temp, cur, prev;
     temp = (NODE)malloc(sizeof(struct node));
@@ -42,7 +42,7 @@ NODE createBST(NODE root, int item)
     return root;
 }
 
-void preOrder(NODE root)
+void preOrder(NODE root) // function to start the preorder traversal
 {
     if(root != NULL)
     {
@@ -52,7 +52,7 @@ void preOrder(NODE root)
     }
 }
 
-void inOrder(NODE root)
+void inOrder(NODE root) // function to start the inorder traversal
 {
     if(root != NULL)
     {
@@ -62,7 +62,7 @@ void inOrder(NODE root)
     }
 }
 
-void postOrder(NODE root)
+void postOrder(NODE root) // function to start the postorder traversal
 {
     if(root != NULL)
     {
@@ -72,7 +72,7 @@ void postOrder(NODE root)
     }
 }
 
-int main()
+int main() // main function
 {
     NODE root = NULL;
     int ch, item;
