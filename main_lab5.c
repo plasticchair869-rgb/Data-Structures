@@ -3,15 +3,15 @@
 #include<stdlib.h>
 #define SIZE 5
 
-struct queue
+struct queue // structure function
 {
     int front, rear;
     int data[SIZE];
 };
 
-typedef struct queue QUEUE;
+typedef struct queue QUEUE; // macro
 
-void enqueue(QUEUE *q, int item)
+void enqueue(QUEUE *q, int item) // push operation for a queue
 {
     if(q->rear == SIZE - 1)
         printf("\n QUEUE FULL\n");
@@ -24,7 +24,7 @@ void enqueue(QUEUE *q, int item)
     }
 }
 
-void dequeue(QUEUE *q)
+void dequeue(QUEUE *q) // pop operation for a queue
 {
     if(q->front == -1)
         printf("\n QUEUE EMPTY\n");
@@ -43,7 +43,7 @@ void dequeue(QUEUE *q)
     }
 }
 
-void display(QUEUE q)
+void display(QUEUE q) // display function
 {
     int i;
     if(q.front == -1)
@@ -61,7 +61,7 @@ void display(QUEUE q)
     }
 }
 
-int main()
+int main() // main function
 {
     QUEUE q;
     q.front = -1;
