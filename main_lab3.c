@@ -14,11 +14,11 @@ void push(STACK *s,float item)// push function
 {
     s->data[++(s->top)]=item;
 }
-float pop(STACK *s)//pop function
+float pop(STACK *s) //pop function
 {
     return s->data[(s->top)--];
 }
-float compute(float op1,char symbol,float op2)// computational part
+float compute(float op1,char symbol,float op2) // computational part
 {
     switch(symbol)
     {
