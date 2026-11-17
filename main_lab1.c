@@ -2,13 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define SIZE 5
-struct stack
+struct stack // structure definition
    {
        int top;
        int data[SIZE];
    };
 typedef struct stack STACK;
-void push(STACK *s,int item)
+void push(STACK *s,int item) // push function
    {
        if(s->top==SIZE-1)
             printf("\nOVERFLOW \n");
@@ -18,7 +18,7 @@ void push(STACK *s,int item)
             s->data[s->top]=item;
        }
    }
-void pop(STACK *s)
+void pop(STACK *s) // pop function
    {
        if(s->top==-1)
         printf("\nUNDERFLOW\n");
@@ -28,7 +28,7 @@ void pop(STACK *s)
            s->top=s->top-1;
        }
    }
-   void display(STACK s)
+   void display(STACK s) // display function
    {
        int i;
        if(s.top==-1)
@@ -39,7 +39,7 @@ void pop(STACK *s)
             printf("%d\n", s.data[i]);
        }
    }
-   int main()
+   int main() // main function
    {
        int item,ch;
        STACK s;
