@@ -1,13 +1,13 @@
 // LAB 6: MULTIPLY 2 POLYNOMIALS USING SINGLE LINKED LIST
 #include <stdio.h>
 #include <stdlib.h>
-struct node
+struct node // structure definition
 {
     int co,po;
     struct node *addr;
 };
-typedef struct node *NODE;
-NODE insertEnd(NODE start, int co, int po)
+typedef struct node *NODE; // macro
+NODE insertEnd(NODE start, int co, int po) // insert function at the end of the list
 {
     NODE temp,curr;
     temp=(NODE)malloc(sizeof(struct node));
@@ -22,7 +22,7 @@ NODE insertEnd(NODE start, int co, int po)
     curr->addr=temp;
     return start;
 }
-void display(NODE start)
+void display(NODE start) // function to display the polynomial
 {
     NODE temp;
     if(start==NULL)
@@ -38,7 +38,7 @@ void display(NODE start)
     printf("%d*x^%d\n",temp->co,temp->po);
     }
 }
-NODE addTerm(NODE res,int co,int po)
+NODE addTerm(NODE res,int co,int po) // function to add the polynomials together
 {
     NODE curr=res;
     while(curr!=NULL)
@@ -52,7 +52,7 @@ NODE addTerm(NODE res,int co,int po)
     }
     return insertEnd(res,co,po);
 }
-NODE multiply(NODE poly1,NODE poly2)
+NODE multiply(NODE poly1,NODE poly2) // function to multiply the 2 polynomials
 {
     NODE p1,p2,res=NULL;
     for(p1=poly1 ; p1!=NULL ; p1=p1->addr)
@@ -64,7 +64,7 @@ NODE multiply(NODE poly1,NODE poly2)
     }
     return res;
 }
-int main()
+int main() // main function
 {
     NODE poly1=NULL,poly2=NULL,poly;
     int m,i,co,po;
