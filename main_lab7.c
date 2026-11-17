@@ -1,14 +1,14 @@
 // LAB 7: SPARSE MATRIX USING DOUBLE LINKED LIST
 #include <stdio.h>
 #include <stdlib.h>
-struct node
+struct node // structure definition
 {
     int row,col,data;
     struct node *next;
     struct node *prev;
 };
-typedef struct node *NODE;
-NODE insertEnd(NODE start,int row, int col,int item)
+typedef struct node *NODE; // macro
+NODE insertEnd(NODE start,int row, int col,int item) // inserting the elements at the end of the function
 {
     NODE temp,curr;
     temp=(NODE)malloc(sizeof(struct node));
@@ -26,7 +26,7 @@ NODE insertEnd(NODE start,int row, int col,int item)
     temp->prev=curr;
     return start;
 }
-void display(NODE start)
+void display(NODE start) // display function
 {
     NODE temp;
     if(start==NULL)
@@ -42,7 +42,7 @@ void display(NODE start)
         }
     }
 }
-void displayMatrix(NODE start,int m,int n)
+void displayMatrix(NODE start,int m,int n) // display the matrix
 {
     NODE temp=start;
     int i,j;
@@ -62,7 +62,7 @@ void displayMatrix(NODE start,int m,int n)
         printf("\n");
     }
 }
-int main()
+int main() // main function
 {
     NODE start=NULL;
     int m,n,i,j,item;
