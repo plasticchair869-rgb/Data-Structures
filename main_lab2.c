@@ -3,34 +3,34 @@
 #include<stdlib.h>
 #include<ctype.h>
 #define SIZE 20
-struct stack
+struct stack // structure definition
 {
     int top;
     char data[SIZE];
 };
 typedef struct stack STACK;
-void push(STACK *s, char item)
+void push(STACK *s, char item) // push function
 {
     s->data[++(s->top)]=item;
 }
-char pop(STACK *s)
+char pop(STACK *s) // pop function
 {
     return s->data[(s->top)--];
 
 }
-int preced(char symbol)
+int preced(char symbol) // inputting symbols
 {
     switch(symbol)
     {
-        case '^': return 5;
+        case '^': return 5; // highest preced
         case '*':
         case '/': return 3;
         case '+':
-        case '-': return 1;
+        case '-': return 1; // lowest preced
         default: return 0;
     }
 }
-void infixtopostfix(STACK *s, char infix[20])
+void infixtopostfix(STACK *s, char infix[20]) // main conversion function
 {
     char postfix[30],symbol,temp;
     int i,j=0;
@@ -85,7 +85,7 @@ void infixtopostfix(STACK *s, char infix[20])
     postfix[j]='\0';
     printf("\n POSTFIX EXPRESSION IS: %s\n",postfix);
 }
-int main()
+int main() // main function
 {
     char infix[20];
     STACK s;
