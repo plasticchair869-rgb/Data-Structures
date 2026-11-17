@@ -1,12 +1,12 @@
 // LAB 4B: SOLVING TOWER OF HANOI USING RECURSION
 #include <stdio.h>
 #include <stdlib.h>
-void toh(int n,char source,char dest,char temp)
+void toh(int n,char source,char dest,char temp) // function
 {
     if(n>1)
     {
         toh(n-1,source,temp,dest);
-        printf("\n MOVE DISC %d FROM %c to %c ",n,source,dest);
+        printf("\n MOVE DISC %d FROM %c to %c ",n,source,dest); 
         toh(n-1,temp,dest,source);
     }
     else
