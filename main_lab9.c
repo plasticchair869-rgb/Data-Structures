@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void heapify(int a[10], int n)
+void heapify(int a[10], int n) // heap function definition
 {
     int i, k, v, j, flag;
     for (i = n / 2; i >= 1; i--)
@@ -30,7 +30,7 @@ void heapify(int a[10], int n)
     }
 }
 
-int main()
+int main() // main function
 {
     int n = 0, a[10], i, ch;
     for (;;)
